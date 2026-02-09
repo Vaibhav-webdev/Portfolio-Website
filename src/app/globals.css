@@ -1,6 +1,62 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+* {
+  font-family: 'Poppins', sans-serif;
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 640px) {
+  .orbit-item {
+    --radius: 16vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .orbit-item {
+    --radius: 14vw;
+  }
+}
+.orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  animation: orbit var(--duration) linear infinite;
+  will-change: transform;
+}
+
+@keyframes orbit {
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(var(--angle))
+      translate(var(--radius))
+      rotate(calc(-1 * var(--angle)));
+  }
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(calc(360deg + var(--angle)))
+      translate(var(--radius))
+      rotate(calc(-360deg - var(--angle)));
+  }
+}
+
+.orbit-animate {
+  animation: orbit 14s linear infinite;
+}
+
+::selection {
+  background: #a855f7;   /* purple */
+  color: #ffffff;
+}
 @custom-variant dark (&:is(.dark *));
 h {
   background-color: red;
@@ -92,8 +148,6 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -123,6 +177,8 @@ h1, h2, h3, h4, h5, h6 {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 
 .dark {

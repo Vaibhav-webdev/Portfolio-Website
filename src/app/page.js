@@ -1,21 +1,18 @@
-import Navbar from "./components/navbar";
-import HeroSection from "./components/heroSection"
-import FeaturesSection from "./components/featuresSection";
-import Marquee from "./components/Marquee"
-import Questions from "./components/questions";
-import CallToAction from "./components/call_to_action";
-import Footer from "./components/footer";
+import React from 'react'
+import Hero from './components/Hero'
+import Skills from './components/Skills'
+import Projects from "./components/Projects"
+import ContactSection from './components/Contact'
 
-export default function Home() {
+const page = () => {
   return (
-    <>
-      <Navbar />
-      <HeroSection />
-      <FeaturesSection />
-      <Marquee />
-      <CallToAction />
-      <Questions />
-      <Footer />
-    </>
-  );
+    <div>
+      <Hero />
+      <Skills />
+      <Projects />
+      <ContactSection />
+    </div>
+  )
 }
+
+export default page

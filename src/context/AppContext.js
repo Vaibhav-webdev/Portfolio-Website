@@ -7,10 +7,12 @@ const AppContext = createContext(null)
 export const AppProvider = ({ children }) => {
 
   const [render, setrender] = useState(true)
+  const [limit, setlimit] = useState(false)
+  const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("light");
 
   return (
-    <AppContext.Provider value={{ render, setrender, theme, setTheme }}>
+    <AppContext.Provider value={{ open, setOpen, render, setrender, theme, setTheme, limit, setlimit }}>
       {children}
     </AppContext.Provider>
   )
