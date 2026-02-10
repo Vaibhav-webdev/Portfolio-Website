@@ -57,9 +57,9 @@ const ContactSection = () => {
     </div>
 
     {/* CONTACT CONTENT */}
-    <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="mt-10 sm:mt-12 flex justify-center items-center">
       {/* LEFT - INFO */}
-      <div className="space-y-6">
+      {/* <div className="space-y-6 pr-80">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-indigo-500 text-white rounded-full shrink-0">
             <Mail size={18} />
@@ -76,7 +76,7 @@ const ContactSection = () => {
           <div className="p-3 bg-gray-900 text-white rounded-full shrink-0">
             <Instagram size={18} />
           </div>
-          <div>
+          <div className="pr-40">
             <p className="text-xs sm:text-sm text-gray-500">Instagram</p>
             <p className="text-sm sm:text-base font-medium">
               https://www.instagram.com/vaibhav_website_dev/
@@ -95,7 +95,7 @@ const ContactSection = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* RIGHT - FORM */}
       {submitted ? (
@@ -123,14 +123,7 @@ const ContactSection = () => {
               placeholder="Name"
               name="name"
               required
-              className="
-                w-full
-                py-3 sm:py-4 px-3 sm:px-4
-                bg-white
-                rounded-lg shadow-lg
-                text-sm sm:text-base
-                focus:outline-none
-              "
+              className="w-full py-3 sm:py-4 px-3 sm:px-4 bg-white rounded-lg shadow-lg text-sm sm:text-base focus:outline-none"
             />
             <input
               type="text"
@@ -182,19 +175,12 @@ const ContactSection = () => {
           />
 
           {/* Submit Button */}
-          <div className="flex justify-start">
+          <div className="flex justify-center">
             <button
               type="submit"
-              className="
-                mt-2 sm:mt-3
-                px-5 py-3
-                text-sm sm:text-base
-                bg-black text-white
-                rounded-lg
-                hover:bg-green-700
-                transition-all
-              "
+              className="mt-2 sm:mt-3 px-5 py-3 flex gap-2 items-center justify-center text-sm sm:text-base bg-black text-white rounded-lg hover:bg-green-700 transition-all"
             >
+              <Send />
               Send Now
             </button>
           </div>
