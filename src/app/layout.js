@@ -1,10 +1,8 @@
 import { Toaster } from "sonner"
 import "./globals.css"
-import Navbar from "./components/Navbar"
-import SessionProviderWrapper from "./components/SessionProviderWrapper"
+// import SessionProviderWrapper from "./components/SessionProviderWrapper"
 import Providers from "./providers"
 import { Poppins } from 'next/font/google'
-import Footer from "./components/Footer"
 
 export const poppins = Poppins({
   subsets: ['latin'],
@@ -21,15 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={poppins.variable}>
-        <SessionProviderWrapper>
+        {/* <SessionProviderWrapper> */}
           <Providers>
-            <Navbar />
               {children}
-            <Footer />
               <Toaster
               position="top-center"/>
           </Providers>
-        </SessionProviderWrapper>
+        {/* </SessionProviderWrapper> */}
       </body>
     </html>
   )

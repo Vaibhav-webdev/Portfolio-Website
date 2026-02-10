@@ -150,15 +150,7 @@ const SkillsRoadmap = () => {
           >
             {/* CARD */}
             <div
-              className="
-                w-full sm:w-[70%] md:w-[60%] lg:w-[45%]
-                bg-white dark:bg-neutral-900
-                shadow-lg rounded-xl
-                px-5 py-4
-                flex items-start gap-4
-                hover:scale-[1.04]
-                transition-transform
-              "
+              className="w-full sm:w-[70%] md:w-[60%] lg:w-[45%] bg-white dark:bg-neutral-900 shadow-lg rounded-xl px-5 py-4 flex items-start gap-4 hover:scale-[1.04] transition-transform"
             >
               <div className="shrink-0 p-3 rounded-full bg-indigo-500 text-white">
                 <Icon size={18} />
