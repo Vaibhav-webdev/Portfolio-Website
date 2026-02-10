@@ -74,8 +74,8 @@ const projects = [
       "Tailwind CSS",
       "AI Image API",
     ],
-    github: "#",
-    live: "#",
+    github: "https://github.com/Vaibhav-webdev/Thumbnail-Generator",
+    live: "https://zenix-five.vercel.app/",
   },
   {
     title: "Real-Time Chat Application",
@@ -96,8 +96,8 @@ const projects = [
       "Socket.IO",
       "MongoDB",
     ],
-    github: "#",
-    live: "#",
+    github: "https://github.com/Vaibhav-webdev/Chat-Application",
+    live: "https://pigio.vercel.app/",
   },
   {
   title: "Personal Portfolio Website",
@@ -140,7 +140,7 @@ const projects = [
     "AI APIs",
     "Tailwind CSS",
   ],
-  github: "#",
+  github: "https://github.com/Vaibhav-webdev/FusionAi",
   live: "https://fusionai-dusky.vercel.app/",
 }
 
