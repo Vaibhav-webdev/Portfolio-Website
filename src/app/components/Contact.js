@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, Send } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ContactSection = () => {
@@ -67,19 +67,19 @@ const ContactSection = () => {
           <div>
             <p className="text-xs sm:text-sm text-gray-500">Email</p>
             <p className="text-sm sm:text-base font-medium">
-              yourmail@gmail.com
+              vaibhavbusiness221@gmail.com
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-4">
           <div className="p-3 bg-gray-900 text-white rounded-full shrink-0">
-            <Github size={18} />
+            <Instagram size={18} />
           </div>
           <div>
-            <p className="text-xs sm:text-sm text-gray-500">GitHub</p>
+            <p className="text-xs sm:text-sm text-gray-500">Instagram</p>
             <p className="text-sm sm:text-base font-medium">
-              github.com/yourusername
+              https://www.instagram.com/vaibhav_website_dev/
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ const ContactSection = () => {
           <div>
             <p className="text-xs sm:text-sm text-gray-500">LinkedIn</p>
             <p className="text-sm sm:text-base font-medium">
-              linkedin.com/in/yourprofile
+              https://www.linkedin.com/in/vaibhav-shukla-74819a392
             </p>
           </div>
         </div>
