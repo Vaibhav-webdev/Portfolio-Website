@@ -58,45 +58,6 @@ const ContactSection = () => {
 
     {/* CONTACT CONTENT */}
     <div className="mt-10 sm:mt-12 flex justify-center items-center">
-      {/* LEFT - INFO */}
-      {/* <div className="space-y-6 pr-80">
-        <div className="flex items-center gap-4">
-          <div className="p-3 bg-indigo-500 text-white rounded-full shrink-0">
-            <Mail size={18} />
-          </div>
-          <div>
-            <p className="text-xs sm:text-sm text-gray-500">Email</p>
-            <p className="text-sm sm:text-base font-medium">
-              vaibhavbusiness221@gmail.com
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <div className="p-3 bg-gray-900 text-white rounded-full shrink-0">
-            <Instagram size={18} />
-          </div>
-          <div className="pr-40">
-            <p className="text-xs sm:text-sm text-gray-500">Instagram</p>
-            <p className="text-sm sm:text-base font-medium">
-              https://www.instagram.com/vaibhav_website_dev/
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <div className="p-3 bg-blue-600 text-white rounded-full shrink-0">
-            <Linkedin size={18} />
-          </div>
-          <div>
-            <p className="text-xs sm:text-sm text-gray-500">LinkedIn</p>
-            <p className="text-sm sm:text-base font-medium">
-              https://www.linkedin.com/in/vaibhav-shukla-74819a392
-            </p>
-          </div>
-        </div>
-      </div> */}
-
       {/* RIGHT - FORM */}
       {submitted ? (
         <div className="bg-white shadow-xl rounded-2xl p-6 sm:p-10 w-full text-center">
@@ -123,21 +84,14 @@ const ContactSection = () => {
               placeholder="Name"
               name="name"
               required
-              className="w-full py-3 sm:py-4 px-3 sm:px-4 bg-white rounded-lg shadow-lg text-sm sm:text-base focus:outline-none"
+              className="w-full py-3 sm:py-4 px-3 sm:px-4 bg-white/60 dark:bg-black/40 rounded-lg shadow-lg text-sm sm:text-base focus:outline-none"
             />
             <input
               type="text"
               placeholder="Subject"
               name="subject"
               required
-              className="
-                w-full
-                py-3 sm:py-4 px-3 sm:px-4
-                bg-white
-                rounded-lg shadow-lg
-                text-sm sm:text-base
-                focus:outline-none
-              "
+              className="w-full py-3 sm:py-4 px-3 sm:px-4 bg-white/60 dark:bg-black/40 rounded-lg shadow-lg text-sm sm:text-base focus:outline-none"
             />
           </div>
 
@@ -147,14 +101,7 @@ const ContactSection = () => {
             placeholder="Email"
             name="email"
             required
-            className="
-              w-full
-              py-3 sm:py-4 px-3 sm:px-4
-              bg-white
-              rounded-lg shadow-lg
-              text-sm sm:text-base
-              focus:outline-none
-            "
+            className="w-full py-3 sm:py-4 px-3 sm:px-4 bg-white/60 dark:bg-black/40 rounded-lg shadow-lg text-sm sm:text-base focus:outline-none"
           />
 
           {/* Message */}
@@ -162,23 +109,14 @@ const ContactSection = () => {
             placeholder="Message"
             name="message"
             required
-            className="
-              w-full
-              h-36 sm:h-44
-              py-3 sm:py-4 px-3 sm:px-4
-              bg-white
-              rounded-lg shadow-lg
-              resize-none
-              text-sm sm:text-base
-              focus:outline-none
-            "
+            className="w-full h-36 sm:h-44 py-3 sm:py-4 px-3 sm:px-4 bg-white/60 dark:bg-black/40 rounded-lg shadow-lg resize-none text-sm sm:text-base focus:outline-none"
           />
 
           {/* Submit Button */}
           <div className="flex justify-center">
             <button
               type="submit"
-              className="mt-2 sm:mt-3 px-5 py-3 flex gap-2 items-center justify-center text-sm sm:text-base bg-black text-white rounded-lg hover:bg-green-700 transition-all"
+              className="mt-2 sm:mt-3 px-5 py-3 flex gap-2 items-center justify-center text-sm sm:text-base bg-black/80 cursor-pointer dark:hover:bg-black/50 text-white rounded-lg hover:bg-black/90 transition-all"
             >
               <Send />
               Send Now
