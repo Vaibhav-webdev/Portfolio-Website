@@ -159,14 +159,15 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* NAME + SUBJECT */}
               <div className="grid md:grid-cols-2 gap-4">
-                <Input placeholder="Name" />
-                <Input placeholder="Subject" />
+                <Input name="name" placeholder="Name" />
+                <Input name="subject" placeholder="Subject" />
               </div>
 
-              <Input placeholder="Email" type="email" />
+              <Input name="email" placeholder="Email" type="email" />
 
               <textarea
                 placeholder="Message"
+                name="message"
                 required
                 className="w-full h-40 p-4 resize-none rounded-xl bg-white/70 dark:bg-white/10 border border-gray-200 dark:border-white/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-cyan-500 transition"
               />
@@ -192,20 +193,16 @@ const ContactSection = () => {
 
 export default ContactSection;
 
-function Input({ placeholder, type = "text", glow }) {
+function Input({ placeholder, type = "text", name }) {
   return (
     <div className="relative group">
       <input
         type={type}
         required
+        name={name}
         placeholder={placeholder}
         className="w-full p-4 rounded-xl bg-white/70 dark:bg-white/10 border border-gray-200 dark:border-white/20 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
       />
-
-      {/* HOVER GLOW */}
-      {glow && (
-        <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 bg-gradient-to-r from-cyan-400 to-purple-500 blur-xl transition duration-500 -z-10" />
-      )}
     </div>
   );
 }
