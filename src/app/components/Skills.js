@@ -80,12 +80,98 @@ const SkillsRoadmap = () => {
     [1, 0]
   );
 
+  <style>{`
+        /* ── Orbit animation ── */
+        @keyframes orbit {
+          from {
+            transform: translate(-50%, -50%)
+              rotate(var(--angle))
+              translateX(var(--radius))
+              rotate(calc(-1 * var(--angle)));
+          }
+          to {
+            transform: translate(-50%, -50%)
+              rotate(calc(var(--angle) + 360deg))
+              translateX(var(--radius))
+              rotate(calc(-1 * (var(--angle) + 360deg)));
+          }
+        }
+        .orbit-item {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          animation: orbit var(--duration, 26s) linear infinite;
+        }
+
+        /* ── Float animations ── */
+        @keyframes float-up {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50%       { transform: translateY(-14px) rotate(4deg); }
+        }
+        @keyframes float-down {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50%       { transform: translateY(12px) rotate(-4deg); }
+        }
+        .hex-frame-float  { animation: float-up   7s ease-in-out infinite; }
+        .hex-small-float  { animation: float-down 4.5s ease-in-out infinite; }
+        .hex-small-float2 { animation: float-up   5.5s ease-in-out infinite; }
+
+        /* ── Name shimmer ── */
+        @keyframes shimmer {
+          0%   { background-position: -200% center; }
+          100% { background-position:  200% center; }
+        }
+        .name-shimmer {
+          background: linear-gradient(
+            90deg,
+            #7c3aed 0%,
+            #6366f1 30%,
+            #a78bfa 60%,
+            #7c3aed 100%
+          );
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: shimmer 4s linear infinite;
+        }
+
+        /* ── Glow pulse (dark mode blobs) ── */
+        @keyframes glow-pulse {
+          0%, 100% { opacity: 0.18; filter: blur(120px); }
+          50%       { opacity: 0.30; filter: blur(150px); }
+        }
+        .glow-blob { animation: glow-pulse 5s ease-in-out infinite; }
+        .glow-blob-2 {
+          animation: glow-pulse 6s ease-in-out infinite;
+          animation-delay: 2.5s;
+        }
+
+        /* ── Dot-grid background ── */
+        .dot-grid {
+          background-image: radial-gradient(circle, #a78bfa22 1px, transparent 1px);
+          background-size: 28px 28px;
+        }
+        .dark .dot-grid {
+          background-image: radial-gradient(circle, #7c3aed18 1px, transparent 1px);
+        }
+
+        /* ── Purple glow ring behind photo ── */
+        @keyframes ring-pulse {
+          0%, 100% { transform: translate(-50%, -50%) scale(1);   opacity: 0.55; }
+          50%       { transform: translate(-50%, -50%) scale(1.06); opacity: 0.80; }
+        }
+        .photo-glow {
+          animation: ring-pulse 4s ease-in-out infinite;
+        }
+      `}</style>
   return (
     <section
   ref={sectionRef}
   id="skills"
-  className="relative py-20 sm:py-24 lg:py-28 px-5 sm:px-8 md:px-20 overflow-hidden"
+  className="relative py-20  dot-grid sm:py-24 lg:py-28 px-5 sm:px-8 md:px-20 overflow-hidden"
 >
+  
   {/* TITLE */}
   <div className="text-center mb-12 sm:mb-16">
     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
