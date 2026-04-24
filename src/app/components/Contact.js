@@ -116,7 +116,7 @@ const ContactSection = () => {
   return (
      <section
       id="contact"
-      className="relative py-24 px-6 overflow-hidden"
+      className="relative sm:py-18 sm:px-6 overflow-hidden"
     >
 
       <motion.div

@@ -381,7 +381,7 @@ const Hero = () => {
               {/* ── Portrait photo ── */}
               <motion.div
                 whileHover={{ scale: 1.04 }}
-                className="relative z-20 rounded-full overflow-hidden mb-10 h-[34vh] w-[34vh] md:h-[28vw] md:h-[28vw]"
+                className="relative z-20 rounded-full overflow-hidden mb-10 h-[36vh] w-[36vh] sm:h-[28vw] sm:w-[28vw]"
               >
                 <Image
                   src="/logo3.png"
