@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
+import { CheckCircle } from "lucide-react";
 import { Mail, Github, Linkedin, Instagram, Send } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -25,7 +26,7 @@ const ContactSection = () => {
       setSubmitted(true);
       form.reset();
     } else {
-      alert("Error sending message. Try again!");
+      alert("Error sending message. Try again!", response);
     }
   };
   <style>{`
