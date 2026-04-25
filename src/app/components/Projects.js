@@ -13,6 +13,27 @@ import {
 
 const projects = [
   {
+    title: "School Website Platform",
+    subtitle: "Modern website for school management and communication",
+    problem:
+      "Schools often lack a centralized and modern platform to share announcements, manage information, and communicate effectively with students and parents.",
+    approach:
+      "Designed a responsive and accessible UI using Tailwind CSS, structured the app using Next.js, and planned modular components for scalability and easy content updates.",
+    solution:
+      "Developed a school website featuring announcements, event updates, student information sections, and a user-friendly interface for seamless navigation across devices.",
+    learnings:
+      "Improved skills in building structured multi-page applications, responsive design, and organizing scalable frontend architecture with clean UI practices.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "REST API"
+    ],
+    github: "https://github.com/Vaibhav-webdev/Edukids",
+    live: "https://educationskids.netlify.app/"
+  },
+  {
     title: "E-Commerce Website",
     subtitle: "Full-stack e-commerce platform",
     problem:
@@ -155,7 +176,7 @@ const ProjectsTimeline = () => {
   });
 
   const lineScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
-<style>{`
+  <style>{`
         /* ── Orbit animation ── */
         @keyframes orbit {
           from {
