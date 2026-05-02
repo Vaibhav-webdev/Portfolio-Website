@@ -56,6 +56,27 @@ const projects = [
     live: "https://voltix-theta.vercel.app/",
   },
   {
+    title: "Education Sphere Platform",
+    subtitle: "Interactive web platform for school communication and updates",
+    problem:
+      "Many educational institutions struggle with outdated systems that fail to deliver real-time updates and organized information to students and parents.",
+    approach:
+      "Built a dynamic and responsive frontend using Next.js and Tailwind CSS, focusing on reusable components and smooth user experience across all devices.",
+    solution:
+      "Created a modern education platform that highlights announcements, academic details, event updates, and structured information in an easy-to-navigate layout.",
+    learnings:
+      "Enhanced understanding of scalable frontend architecture, component reusability, and designing intuitive user interfaces with better UX flow.",
+    tech: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "REST API"
+    ],
+    github: "https://github.com/Vaibhav-webdev/EduSphere", // add repo if available
+    live: "https://education-sphere.netlify.app/"
+  },
+  {
     title: "AI Powered Resume Builder",
     subtitle: "Smart resume generation using AI",
     problem:
