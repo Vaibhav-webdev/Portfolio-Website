@@ -160,7 +160,7 @@ const projects = [
       "Tailwind CSS",
     ],
     github: "https://github.com/Vaibhav-webdev/Vaibhav-Portfolio",
-    live: "https://vaibhav-webdev.github.io/Vaibhav-Portfolio/",
+    live: "https://thumbnail-woad.vercel.app",
   },
   {
     title: "AI SaaS Web Application",
