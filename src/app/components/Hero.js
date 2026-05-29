@@ -34,8 +34,14 @@ const Hero = () => {
       name: "MongoDB",
     },
     {
-      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      name: "Figma",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    name: "Express",
+    invertDark: true,
+  },
+    {
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg",
+      name: "Expo",
+      invertDark: true,
     },
   ];
 

@@ -4,22 +4,27 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Code,
+  FileCode,
   Palette,
+  Brush,
+  Braces,
+  Atom,
+  Cpu,
   Server,
   Database,
-  Braces,
-  Cpu,
+  Boxes,
+  Smartphone,
 } from "lucide-react";
 
 const skills = [
   {
     name: "HTML",
-    icon: Code,
+    icon: FileCode,
     desc: "Writing semantic and accessible HTML with proper document structure, SEO-friendly markup, and best practices for clean and maintainable layouts."
   },
   {
     name: "CSS",
-    icon: Palette,
+    icon: Brush,
     desc: "Creating responsive and modern layouts using Flexbox and Grid, managing layouts across devices, and adding smooth animations and transitions."
   },
   {
@@ -34,8 +39,13 @@ const skills = [
   },
   {
     name: "React",
-    icon: Cpu,
+    icon: Atom,
     desc: "Developing reusable components with hooks, managing application state, handling side effects, and building scalable component-based architectures."
+  },
+  {
+    name: "React Native",
+    icon: Smartphone,
+    desc: "Building cross-platform mobile apps using React Native, handling navigation, native APIs, performance optimization, and responsive mobile UI."
   },
   {
     name: "Next.js",
@@ -49,7 +59,7 @@ const skills = [
   },
   {
     name: "Express",
-    icon: Server,
+    icon: Boxes,
     desc: "Designing RESTful APIs with Express, managing routing, middleware, validation, and following MVC architecture patterns."
   },
   {
@@ -63,8 +73,6 @@ const skills = [
     desc: "Using Python for scripting, basic automation, problem-solving, and understanding core programming concepts."
   },
 ];
-
-
 
 const SkillsRoadmap = () => {
   const sectionRef = useRef(null);
