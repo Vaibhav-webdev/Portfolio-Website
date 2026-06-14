@@ -239,8 +239,11 @@ const Hero = () => {
                   className="rounded-full border border-gray-300 dark:border-gray-600 cursor-pointer bg-white/60 dark:bg-white/5 backdrop-blur-sm hover:border-purple-500 transition-colors"
                 >
                   <div className="px-7 py-3 flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                    <Link href="#contact">Contact</Link>
-                    <Mail size={18} />
+                    <Link href="#contact" className="flex items-center gap-2 hover:text-blue-500 transition-colors">
+  <Mail size={18} />
+  <span>Contact</span>
+</Link>
+>
                   </div>
                 </motion.button>
               </motion.div>
