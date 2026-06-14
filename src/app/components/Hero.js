@@ -225,8 +225,10 @@ const Hero = () => {
                   className="rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold shadow-lg shadow-purple-200 dark:shadow-purple-900/40"
                 >
                   <div className="px-7 py-3 flex items-center gap-2">
-                    <Link href="#projects">View Projects</Link>
-                    <ArrowRight size={18} />
+                    <Link href="#projects" className="flex items-center gap-1 hover:underline">
+  View Projects
+  <ArrowRight size={18} />
+</Link>
                   </div>
                 </motion.button>
 
