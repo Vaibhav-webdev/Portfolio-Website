@@ -52,7 +52,7 @@ const projects = [
       "Auth.js",
       "REST API",
     ],
-    github: "https://github.com/Vaibhav-webdev/Voltix",
+    // github: "https://github.com/Vaibhav-webdev/Voltix",
     live: "https://voltix-theta.vercel.app/",
   },
   {
@@ -73,7 +73,7 @@ const projects = [
       "JavaScript",
       "REST API"
     ],
-    github: "https://github.com/Vaibhav-webdev/EduSphere", // add repo if available
+    // github: "https://github.com/Vaibhav-webdev/EduSphere", // add repo if available
     live: "https://education-sphere.netlify.app/"
   },
   {
@@ -95,7 +95,7 @@ const projects = [
       "AI APIs",
       "JavaScript",
     ],
-    github: "https://github.com/Vaibhav-webdev/Resume-Builder",
+    // github: "https://github.com/Vaibhav-webdev/Resume-Builder",
     live: "https://resume-builder-alpha-sable.vercel.app/",
   },
   {
@@ -116,7 +116,7 @@ const projects = [
       "Tailwind CSS",
       "AI Image API",
     ],
-    github: "https://github.com/Vaibhav-webdev/Thumbnail-Generator",
+    // github: "https://github.com/Vaibhav-webdev/Thumbnail-Generator",
     live: "https://zenix-five.vercel.app/",
   },
   {
@@ -138,7 +138,7 @@ const projects = [
       "Socket.IO",
       "MongoDB",
     ],
-    github: "https://github.com/Vaibhav-webdev/Chat-Application",
+   // github: "https://github.com/Vaibhav-webdev/Chat-Application",
     live: "https://pigio.vercel.app/",
   },
   {
@@ -159,7 +159,7 @@ const projects = [
       "React",
       "Tailwind CSS",
     ],
-    github: "https://github.com/Vaibhav-webdev/Thumbnail",
+    // github: "https://github.com/Vaibhav-webdev/Thumbnail",
     live: "https://thumbnail-woad.vercel.app/",
     github: "https://github.com/Vaibhav-webdev/Vaibhav-Portfolio",
     live: "https://thumbnail-woad.vercel.app",
@@ -184,7 +184,7 @@ const projects = [
       "AI APIs",
       "Tailwind CSS",
     ],
-    github: "https://github.com/Vaibhav-webdev/FusionAi",
+    // github: "https://github.com/Vaibhav-webdev/FusionAi",
     live: "https://fusionai-dusky.vercel.app/",
   }
 
