@@ -159,13 +159,10 @@ const projects = [
       "React",
       "Tailwind CSS",
     ],
-<<<<<<< HEAD
     github: "https://github.com/Vaibhav-webdev/Thumbnail",
     live: "https://thumbnail-woad.vercel.app/",
-=======
     github: "https://github.com/Vaibhav-webdev/Vaibhav-Portfolio",
     live: "https://thumbnail-woad.vercel.app",
->>>>>>> 331c2854a09e2d8e151305c4f320f55114d49799
   },
   {
     title: "AI SaaS Web Application",
