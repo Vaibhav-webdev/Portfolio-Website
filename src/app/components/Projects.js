@@ -384,12 +384,12 @@ const ProjectsTimeline = () => {
 
                   {/* ACTIONS */}
                   <div className="mt-5 flex gap-4">
-                    <a
+                    {/*<a
                       href={project.github}
                       className="flex items-center gap-1 text-xs sm:text-sm hover:underline"
                     >
                       <Github size={15} /> GitHub
-                    </a>
+                    </a>*/}
                     <a
                       href={project.live}
                       className="flex items-center gap-1 text-xs sm:text-sm hover:underline"
