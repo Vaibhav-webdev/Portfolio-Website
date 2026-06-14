@@ -30,7 +30,7 @@ const projects = [
       "JavaScript",
       "REST API"
     ],
-    github: "https://github.com/Vaibhav-webdev/Edukids",
+    // github: "https://github.com/Vaibhav-webdev/Edukids",
     live: "https://educationskids.netlify.app/"
   },
   {
