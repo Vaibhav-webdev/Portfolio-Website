@@ -240,10 +240,8 @@ const Hero = () => {
                 >
                   <div className="px-7 py-3 flex items-center gap-2 text-gray-700 dark:text-gray-300">
                     <Link href="#contact" className="flex items-center gap-2 hover:text-blue-500 transition-colors">
-  <Mail size={18} />
-  <span>Contact</span>
-</Link>
->
+                    <Mail size={18} />
+                    <span>Contact</span></Link>
                   </div>
                 </motion.button>
               </motion.div>
