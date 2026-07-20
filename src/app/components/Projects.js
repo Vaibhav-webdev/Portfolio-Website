@@ -186,8 +186,76 @@ const projects = [
     ],
     // github: "https://github.com/Vaibhav-webdev/FusionAi",
     live: "https://fusionai-dusky.vercel.app/",
+  },
+  {
+    title: "Next.js Masterclass Platform",
+    subtitle: "Comprehensive Next.js learning hub with live coding",
+    problem:
+      "Developers struggle to find a centralized, hands-on learning environment for Next.js that goes beyond basic tutorials and prepares them for real-world interviews.",
+    approach:
+      "Integrated a web-based code editor, structured learning roadmap, and AI-driven mock interviews to create an immersive, end-to-end educational experience.",
+    solution:
+      "Developed an interactive learning platform featuring a complete Next.js roadmap, a live in-browser code editor for instant feedback, and a mock interview module to test theoretical and practical knowledge.",
+    learnings:
+      "Gained expertise in building web-based code execution environments (like Monaco Editor), structuring complex educational platforms, and integrating AI for dynamic interview scenarios.",
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Monaco Editor",
+      "OpenAI API",
+      "PostgreSQL"
+    ],
+    // github: "https://github.com/Vaibhav-webdev/nextjs-masterclass",
+    live: "https://nativecrush.vercel.app/"
+  },
+  {
+    title: "JavaScript Interactive Bootcamp",
+    subtitle: "Interactive JS learning platform with roadmaps and live execution",
+    problem:
+      "Beginners often find it difficult to transition from basic syntax to advanced JavaScript concepts without a guided roadmap and immediate, safe coding practice.",
+    approach:
+      "Designed a step-by-step curriculum paired with a live coding sandbox and automated code evaluation to ensure practical mastery alongside theory.",
+    solution:
+      "Built a dedicated JavaScript learning portal offering a structured roadmap from basics to advanced DOM manipulation, a live code editor, and realistic mock interview simulations.",
+    learnings:
+      "Mastered state management for live code execution, improved curriculum design for tech education, and implemented secure sandboxing for user-submitted code.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "CodeMirror",
+      "WebSockets",
+      "Tailwind CSS"
+    ],
+    // github: "https://github.com/Vaibhav-webdev/js-bootcamp",
+    live: "https://scriptcrush.vercel.app/"
+  },
+  {
+    title: "Python Pro Hub",
+    subtitle: "Ultimate Python learning ecosystem with interactive compiler",
+    problem:
+      "Aspiring Python developers lack a unified platform that combines guided roadmaps, live coding capabilities, and technical interview preparation in one seamless interface.",
+    approach:
+      "Leveraged in-browser compilation and cloud-based execution to provide a seamless Python coding experience alongside structured learning modules.",
+    solution:
+      "Created an all-inclusive Python learning platform that features a comprehensive roadmap (from basics to Data Science/Backend), a live in-browser Python compiler, and an AI-powered mock interview system.",
+    learnings:
+      "Learned how to run Python in the browser using WebAssembly (Pyodide), designed scalable backend architectures for remote code execution, and enhanced AI prompt engineering.",
+    tech: [
+      "Next.js",
+      "Python",
+      "FastAPI",
+      "Pyodide",
+      "Docker",
+      "Tailwind CSS",
+      "PostgreSQL"
+    ],
+    // github: "https://github.com/Vaibhav-webdev/python-pro-hub",
+    live: "https://pyxode.vercel.app/"
   }
-
 ];
 
 const ProjectsTimeline = () => {
