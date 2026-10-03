@@ -34,10 +34,10 @@ const Hero = () => {
       name: "MongoDB",
     },
     {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    name: "Express",
-    invertDark: true,
-  },
+      src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      name: "Express",
+      invertDark: true,
+    },
     {
       src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg",
       name: "Expo",
@@ -222,13 +222,13 @@ const Hero = () => {
                     boxShadow: "0 0 28px rgba(124,58,237,0.55)",
                   }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold shadow-lg shadow-purple-200 dark:shadow-purple-900/40"
+                  className="rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold shadow-lg shadow-purple-400 dark:shadow-purple-900/40"
                 >
                   <div className="px-7 py-3 flex items-center gap-2">
-                    <Link href="#projects" className="flex items-center gap-1 hover:underline">
-  View Projects
-  <ArrowRight size={18} />
-</Link>
+                    <Link href="#projects" className="flex items-center gap-1">
+                      View Projects
+                      <ArrowRight size={18} />
+                    </Link>
                   </div>
                 </motion.button>
 
@@ -240,8 +240,8 @@ const Hero = () => {
                 >
                   <div className="px-7 py-3 flex items-center gap-2 text-gray-700 dark:text-gray-300">
                     <Link href="#contact" className="flex items-center gap-2 hover:text-blue-500 transition-colors">
-                    <Mail size={18} />
-                    <span>Contact</span></Link>
+                      <Mail size={18} />
+                      <span>Contact</span></Link>
                   </div>
                 </motion.button>
               </motion.div>
@@ -267,39 +267,158 @@ const Hero = () => {
 
               {/* ── Stats Cards ── */}
               <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.85 }}
-                className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4"
               >
                 {stats.map((item, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.9 + i * 0.12 }}
-                    whileHover={{
-                      y: -6,
-                      boxShadow: "0 12px 32px rgba(124,58,237,0.13)",
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.55,
+                      delay: 0.4 + i * 0.12,
+                      ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="cursor-default bg-white/75 dark:bg-white/5 backdrop-blur-sm border border-gray-200/80 dark:border-white/10 rounded-2xl p-4 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-300"
+                    whileHover={{ y: -5 }}
+                    className="
+        group relative overflow-hidden
+        min-h-[190px]
+        rounded-[22px]
+        border border-gray-200/80
+        dark:border-white/[0.09]
+        bg-white
+        dark:bg-[#0b0b10]
+        p-6
+        transition-all duration-500
+        hover:border-purple-500/30
+        dark:hover:border-purple-400/20
+        hover:shadow-[0_20px_50px_rgba(0,0,0,0.07)]
+        dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]
+      "
                   >
-                    {/* Icon badge */}
-                    <div className="w-9 h-9 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 dark:bg-purple-900/40 flex items-center justify-center mb-2.5">
-                      <item.icon size={17} className="text-purple-200 dark:text-gray-200" />
+                    {/* Decorative grid */}
+                    <div
+                      className="
+          pointer-events-none absolute inset-0
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-700
+          [background-image:linear-gradient(to_right,rgba(124,58,237,0.045)_1px,transparent_1px),linear-gradient(to_bottom,rgba(124,58,237,0.045)_1px,transparent_1px)]
+          [background-size:24px_24px]
+        "
+                    />
+
+                    {/* Glow */}
+                    <div
+                      className="
+          pointer-events-none absolute
+          -right-16 -top-16
+          h-32 w-32
+          rounded-full
+          bg-purple-500/10
+          blur-3xl
+          opacity-0
+          group-hover:opacity-100
+          transition-opacity duration-700
+        "
+                    />
+
+                    {/* Top row */}
+                    <div className="relative flex items-start justify-between">
+                      <div
+                        className="
+            flex h-10 w-10 items-center justify-center
+            rounded-xl
+            border border-gray-200
+            bg-gray-50
+            text-gray-500
+            transition-all duration-500
+            group-hover:border-purple-200
+            group-hover:bg-purple-50
+            group-hover:text-purple-600
+            dark:border-white/10
+            dark:bg-white/[0.035]
+            dark:text-gray-400
+            dark:group-hover:border-purple-500/20
+            dark:group-hover:bg-purple-500/10
+            dark:group-hover:text-purple-400
+          "
+                      >
+                        <item.icon size={18} strokeWidth={1.7} />
+                      </div>
+
+                      <span
+                        className="
+            text-[10px] font-semibold
+            tracking-[0.2em]
+            text-gray-300
+            dark:text-white/15
+          "
+                      >
+                        0{i + 1}
+                      </span>
                     </div>
-                    <p className="text-xs font-bold text-gray-800 dark:text-gray-200 tracking-widest">
-                      {item.title}:
-                    </p>
-                    <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mt-0.5">
-                      {item.desc}
-                    </p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-snug">
-                      {item.sub}
-                    </p>
+
+                    {/* Main content */}
+                    <div className="relative mt-7">
+                      <p
+                        className="
+            text-[10px]
+            font-semibold
+            uppercase
+            tracking-[0.2em]
+            text-gray-400
+            dark:text-gray-500
+          "
+                      >
+                        {item.title}
+                      </p>
+
+                      <p
+                        className="
+            mt-2
+            text-xl
+            font-semibold
+            tracking-tight
+            text-gray-900
+            dark:text-white
+            transition-colors duration-300
+            group-hover:text-purple-600
+            dark:group-hover:text-purple-400
+          "
+                      >
+                        {item.desc}
+                      </p>
+
+                      <p
+                        className="
+            mt-2
+            text-xs
+            leading-relaxed
+            text-gray-500
+            dark:text-gray-400
+          "
+                      >
+                        {item.sub}
+                      </p>
+                    </div>
+
+                    {/* Bottom line */}
+                    <div className="absolute bottom-0 left-6 right-6 h-px overflow-hidden bg-gray-100 dark:bg-white/[0.06]">
+                      <motion.div
+                        className="h-full w-0 bg-purple-500"
+                        whileHover={{ width: "100%" }}
+                        transition={{ duration: 0.5 }}
+                      />
+                    </div>
                   </motion.div>
                 ))}
               </motion.div>
+
             </motion.div>
 
             {/* ════════════ RIGHT  ════════════ */}
@@ -351,13 +470,13 @@ const Hero = () => {
                       <motion.div
                         whileHover={{ scale: 1.3 }}
                         title={skill.name}
-                        className="bg-white dark:bg-gray-800 rounded-full shadow-lg shadow-purple-100/60 dark:shadow-purple-900/20 border border-gray-100 dark:border-white/10 flex items-center justify-center"
-                        style={{ width: "50px", height: "50px" }}
+                        className="bg-[#ffffff] dark:bg-gray-800 rounded-full shadow-lg shadow-purple-100/60 dark:shadow-purple-900/20 border border-gray-100 dark:border-white/10 flex items-center justify-center"
+                        style={{ width: "60px", height: "60px" }}
                       >
                         <img
                           src={skill.src}
                           alt={skill.name}
-                          style={{ width: "28px", height: "28px" }}
+                          style={{ width: "30px", height: "30px" }}
                           className={skill.invertDark ? "dark:invert" : ""}
                         />
                       </motion.div>
@@ -372,13 +491,13 @@ const Hero = () => {
                 (crop the RIGHT element from Gemini_Generated_Image file)
               */}
               <div
-                className="absolute z-10 w-[46vh] h-[46vh] md:w-[38vw] md:h-[38vw] hex-frame-float pointer-events-none"
+                className="absolute z-10 w-[46vh] h-[46vh] md:w-[37vw] md:h-[37vw] hex-frame-float pointer-events-none"
               >
                 <Image
                   src="/hex-frame.png"
                   alt=""
-                  height={400}
-                  width={400}
+                  height={350}
+                  width={350}
                   className="w-full h-full object-contain"
                   style={{
                     filter:
@@ -390,12 +509,12 @@ const Hero = () => {
               {/* ── Portrait photo ── */}
               <motion.div
                 whileHover={{ scale: 1.04 }}
-                className="relative z-20 rounded-full overflow-hidden mb-10 h-[36vh] w-[36vh] sm:h-[28vw] sm:w-[28vw]"
+                className="relative z-20 rounded-full overflow-hidden mb-10 md:mb-18 h-[36vh] w-[36vh] sm:h-[30vw] sm:w-[30vw]"
               >
                 <Image
                   src="/logo3.png"
-                  height={300}
-                  width={300}
+                  height={380}
+                  width={380}
                   alt="Vaibhav Shukla"
                   className="w-full h-full object-cover object-top"
                 />

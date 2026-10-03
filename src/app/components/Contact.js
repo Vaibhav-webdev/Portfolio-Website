@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
-import { useState } from "react";
-import { CheckCircle } from "lucide-react";
-import { Mail, Github, Linkedin, Instagram, Send } from "lucide-react";
+import React, { useState } from "react";
+import { CheckCircle, Send } from "lucide-react";
 import { motion } from "framer-motion";
 
 const ContactSection = () => {
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -29,97 +28,12 @@ const ContactSection = () => {
       alert("Error sending message. Try again!", response);
     }
   };
-  <style>{`
-        /* ── Orbit animation ── */
-        @keyframes orbit {
-          from {
-            transform: translate(-50%, -50%)
-              rotate(var(--angle))
-              translateX(var(--radius))
-              rotate(calc(-1 * var(--angle)));
-          }
-          to {
-            transform: translate(-50%, -50%)
-              rotate(calc(var(--angle) + 360deg))
-              translateX(var(--radius))
-              rotate(calc(-1 * (var(--angle) + 360deg)));
-          }
-        }
-        .orbit-item {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          animation: orbit var(--duration, 26s) linear infinite;
-        }
 
-        /* ── Float animations ── */
-        @keyframes float-up {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50%       { transform: translateY(-14px) rotate(4deg); }
-        }
-        @keyframes float-down {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50%       { transform: translateY(12px) rotate(-4deg); }
-        }
-        .hex-frame-float  { animation: float-up   7s ease-in-out infinite; }
-        .hex-small-float  { animation: float-down 4.5s ease-in-out infinite; }
-        .hex-small-float2 { animation: float-up   5.5s ease-in-out infinite; }
-
-        /* ── Name shimmer ── */
-        @keyframes shimmer {
-          0%   { background-position: -200% center; }
-          100% { background-position:  200% center; }
-        }
-        .name-shimmer {
-          background: linear-gradient(
-            90deg,
-            #7c3aed 0%,
-            #6366f1 30%,
-            #a78bfa 60%,
-            #7c3aed 100%
-          );
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          animation: shimmer 4s linear infinite;
-        }
-
-        /* ── Glow pulse (dark mode blobs) ── */
-        @keyframes glow-pulse {
-          0%, 100% { opacity: 0.18; filter: blur(120px); }
-          50%       { opacity: 0.30; filter: blur(150px); }
-        }
-        .glow-blob { animation: glow-pulse 5s ease-in-out infinite; }
-        .glow-blob-2 {
-          animation: glow-pulse 6s ease-in-out infinite;
-          animation-delay: 2.5s;
-        }
-
-        /* ── Dot-grid background ── */
-        .dot-grid {
-          background-image: radial-gradient(circle, #a78bfa22 1px, transparent 1px);
-          background-size: 28px 28px;
-        }
-        .dark .dot-grid {
-          background-image: radial-gradient(circle, #7c3aed18 1px, transparent 1px);
-        }
-
-        /* ── Purple glow ring behind photo ── */
-        @keyframes ring-pulse {
-          0%, 100% { transform: translate(-50%, -50%) scale(1);   opacity: 0.55; }
-          50%       { transform: translate(-50%, -50%) scale(1.06); opacity: 0.80; }
-        }
-        .photo-glow {
-          animation: ring-pulse 4s ease-in-out infinite;
-        }
-      `}</style>
   return (
-     <section
+    <section
       id="contact"
       className="relative sm:py-18 sm:px-6 overflow-hidden"
     >
-
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -130,13 +44,14 @@ const ContactSection = () => {
         {/* HEADER */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-            Let’s 
+            Let’s{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent">
               Connect
             </span>
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-            I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            I’m always open to discussing new projects, creative ideas, or
+            opportunities to be part of your vision.
           </p>
         </div>
 

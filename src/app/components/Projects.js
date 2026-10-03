@@ -457,6 +457,8 @@ const ProjectsTimeline = () => {
                     </a>*/}
                     <a
                       href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-1 text-xs sm:text-sm hover:underline"
                     >
                       <ExternalLink size={15} /> Live

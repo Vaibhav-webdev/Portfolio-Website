@@ -53,10 +53,10 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             {/* Desktop Socials */}
             <div className="hidden md:flex items-center gap-4">
-              <a href="https://www.instagram.com/vaibhav_website_dev/" className="hover:text-purple-600 transition">
+              {/* <a href="https://www.instagram.com/vaibhav_website_dev/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition">
                 <Instagram />
-              </a>
-              <a href="https://www.linkedin.com/in/vaibhav-shukla-74819a392" className="hover:text-purple-600 transition">
+              </a> */}
+              <a href="https://www.linkedin.com/in/vaibhav-shukla-74819a392" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition">
                 <Linkedin />
               </a>
             </div>
